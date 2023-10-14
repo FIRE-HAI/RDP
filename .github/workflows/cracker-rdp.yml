@@ -25,36 +25,20 @@ jobs:
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
         Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "P@ssw0rd!" -Force)
     - name: TEST
-      timeout-minutes: 1
-      continue-on-error: true
       run: .\ngrok\ngrok.exe tcp 3389
     - name: Create ngrok tunnel to remote desktop 2
-      timeout-minutes: 160
-      continue-on-error: true
       run: .\ngrok\ngrok.exe tcp 3389
     - name: Create ngrok tunnel to remote desktop 3
       run: .\ngrok\ngrok.exe tcp 3389
     - name: Create ngrok tunnel to remote desktop 4
-      timeout-minutes: 40
-      continue-on-error: true
       run: .\ngrok\ngrok.exe tcp 3389
     - name: Create ngrok tunnel to remote desktop 5
-      timeout-minutes: 40
-      continue-on-error: true
       run: .\ngrok\ngrok.exe tcp 3389
     - name: Create ngrok tunnel to remote desktop 6
-      timeout-minutes: 40
-      continue-on-error: true
       run: .\ngrok\ngrok.exe tcp 3389
     - name: Create ngrok tunnel to remote desktop 7
-      timeout-minutes: 40
-      continue-on-error: true
       run: .\ngrok\ngrok.exe tcp 3389
     - name: Create ngrok tunnel to remote desktop 8
-      timeout-minutes: 40
-      continue-on-error: true
       run: .\ngrok\ngrok.exe tcp 3389
     - name: Create ngrok tunnel to remote desktop 9
-      timeout-minutes: 40
-      continue-on-error: true
       run: .\ngrok\ngrok.exe tcp 3389
